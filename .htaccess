@@ -1,0 +1,31 @@
+
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /booking.bluelagoon/hypertest/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /booking.bluelagoon/hypertest/index.php [L]
+</IfModule>
+
+# END WordPress
+# BEGIN FRedirect_ErrorDocument
+# The directives (lines) between "BEGIN FRedirect_ErrorDocument" and "END FRedirect_ErrorDocument" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+ErrorDocument 404 /booking.bluelagoon/hypertest/index.php?error=404
+# END FRedirect_ErrorDocument
+# BEGIN Simply Static
+# The directives (lines) between "BEGIN Simply Static" and "END Simply Static" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<Files "C:\xampp\htdocs\booking.bluelagoon\hypertest/wp-content/uploads\simply-static\\963ebc2b9fd0a4cb35cf52c7190f808c-debug.txt">
+require all denied
+require host localhost
+</Files>
+# END Simply Static
